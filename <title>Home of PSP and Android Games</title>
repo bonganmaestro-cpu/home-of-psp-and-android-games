@@ -1,0 +1,146 @@
+index.html<!DOCTYPE html>
+<html>
+<head>
+    <title>Home of PSP and Android Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+            color: #38bdf8;
+            font-size: 22px;
+        }
+
+        .search {
+            text-align: center;
+            margin: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        .game {
+            background: #1e293b;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .game img {
+            width: 180px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #38bdf8;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        /* WhatsApp */
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: green;
+            padding: 15px;
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>🎮 Home of PSP and Android Games</header>
+
+<div class="search">
+    <input type="text" id="searchInput" placeholder="Tafuta game...">
+</div>
+
+<div class="container" id="gameList">
+
+    <!-- PSP GAMES -->
+    <div class="game">
+        <h3>GTA Vice City Stories</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/5d/GTA_VCS_Cover.png">
+        <br>
+        <button onclick="download()">Download</button>
+    </div>
+
+    <div class="game">
+        <h3>God of War</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/God_of_War_Chains_of_Olympus.jpg">
+        <br>
+        <button onclick="download()">Download</button>
+    </div>
+
+    <div class="game">
+        <h3>Tekken 6</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Tekken_6.jpg">
+        <br>
+        <button onclick="download()">Download</button>
+    </div>
+
+    <div class="game">
+        <h3>FIFA 14</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f7/FIFA14Cover.jpg">
+        <br>
+        <button onclick="download()">Download</button>
+    </div>
+
+    <!-- Duplicate style to reach many games -->
+    <div class="game"><h3>Game 1</h3><img src="https://via.placeholder.com/180"><button onclick="download()">Download</button></div>
+    <div class="game"><h3>Game 2</h3><img src="https://via.placeholder.com/180"><button onclick="download()">Download</button></div>
+    <div class="game"><h3>Game 3</h3><img src="https://via.placeholder.com/180"><button onclick="download()">Download</button></div>
+    <div class="game"><h3>Game 4</h3><img src="https://via.placeholder.com/180"><button onclick="download()">Download</button></div>
+    <div class="game"><h3>Game 5</h3><img src="https://via.placeholder.com/180"><button onclick="download()">Download</button></div>
+
+    <!-- unaweza kuendelea kuongeza hadi 60 -->
+
+</div>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/255624369314" class="whatsapp">💬</a>
+
+<script>
+    const searchInput = document.getElementById("searchInput");
+    const games = document.querySelectorAll(".game");
+
+    searchInput.addEventListener("keyup", function() {
+        let value = searchInput.value.toLowerCase();
+
+        games.forEach(game => {
+            game.style.display = game.innerText.toLowerCase().includes(value) ? "block" : "none";
+        });
+    });
+
+    function download(){
+        alert("Download link itawekwa hapa 😎");
+    }
+</script>
+
+</body>
+</html>
